@@ -11,6 +11,6 @@ mile = feet / 5280      # There are 5280 feet in a mile.
 
 # Output of the program.
 print()
-print(feet,"\t Feet --> Inch\t",inch)
-print(feet,"\t Feet --> Yard\t",yard)
-print(feet,"\t Feet --> Mile\t",mile)
+print(feet,"\tFeet --> Inch\t",inch)
+print(feet,"\tFeet --> Yard\t",yard)
+print(feet,"\tFeet --> Mile\t",mile)
