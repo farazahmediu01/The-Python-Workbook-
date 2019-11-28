@@ -1,5 +1,0 @@
-print("\n\nProgram starts from here...\n")
-print("Name:    Faraz Ahmed")
-print("Address: Gulsan-e-Faizan")
-print("S/O:     Shabbir Ahmed")
-print("Em@il:   farazahmediu01@gmail.com")

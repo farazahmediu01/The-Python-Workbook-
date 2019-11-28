@@ -1,4 +1,4 @@
-print("The program start now...")
+print("The program start now...\n")
 from math import log10
 
 # User input a and b.

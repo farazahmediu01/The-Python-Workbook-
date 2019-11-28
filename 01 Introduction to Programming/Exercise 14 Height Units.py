@@ -12,4 +12,4 @@ hight_in_centimeters = (hight_in_inch + hight_in_feet * 10) * 2.54
 
 
 # Output.
-print("\nYour height in centimeters =",hight_in_centimeters)
+print("\nYour height in centimeters=",hight_in_centimeters)
