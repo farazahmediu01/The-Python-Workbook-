@@ -1,17 +1,3 @@
-'''
-def removing_outliers(array,inp):
-    dup_array = array.sort()
-
-    for i in range(inp):                               # dup_array[:inp]:
-        del dup_array[i]                               #dup_array.pop(i)    
-    dup_array.reverse()
-    
-    for i in range(inp):                               # dup_array[:inp]:
-        del dup_array[i]                               #dup_array.pop()
-    dup_array.reverse()
-
-    return dup_array
-'''
 array = []
 dup_array = []
 n = 0
@@ -40,3 +26,18 @@ for i in range(1, inp+1):
 
 print(f"Original Array    = {array}.")
 print(f'Removed Outlayers = {dup_array}')
+'''
+def removing_outliers(array,inp):
+    dup_array = array.sort()
+
+    for i in range(inp):                               # dup_array[:inp]:
+        del dup_array[i]                               #dup_array.pop(i)    
+    dup_array.reverse()
+    
+    for i in range(inp):                               # dup_array[:inp]:
+        del dup_array[i]                               #dup_array.pop()
+    dup_array.reverse()
+
+    return dup_array
+'''
+
