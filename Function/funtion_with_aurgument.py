@@ -1,5 +1,7 @@
-def greet_user(name):
+def greet_user(name):    
     message = f'Hello {name.title()}, How are you!'
-    print(message)
+    return message
 
-greet_user('faraz')
+name = input('Enter name: ')
+a = greet_user(name)
+print(a)
