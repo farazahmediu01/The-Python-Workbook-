@@ -19,103 +19,104 @@ except:
 
 list_month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
-if month in list_month :
-    
-
-    if month == "January":
+while True:
+    if month in list_month :
         
-        if date >= 1 and date <=19:
-            print("Capricorn.")
+
+        if month == "January":
+            
+            if date >= 1 and date <=19:
+                print("Capricorn.")
+            
+            elif date >= 20 and date <= 31:
+                print("Aquarius.") 
         
-        elif date >= 20 and date <= 31:
-            print("Aquarius.") 
-    
-    elif month == "February":
+        elif month == "February":
 
-        if date >= 1 and date <= 18:
-            print("Aquarius")
+            if date >= 1 and date <= 18:
+                print("Aquarius")
+            
+            elif date >= 19 and date <= 31:
+                print("Pisces.")
+
+        elif month == "March":
+
+            if date >= 1 and date <= 20:
+                print("Pisces.")
+            
+            elif date >= 21 and date <= 31:
+                print("Aries.") 
         
-        elif date >= 19 and date <= 31:
-            print("Pisces.")
+        elif month == "April":
 
-    elif month == "March":
-
-        if date >= 1 and date <= 20:
-            print("Pisces.")
+            if date >= 1 and date <= 19:
+                print("Aries")
+            
+            elif date >= 20 and date <= 31:
+                print("Taurus.") 
         
-        elif date >= 21 and date <= 31:
-            print("Aries.") 
-    
-    elif month == "April":
+        elif month == "May":
 
-        if date >= 1 and date <= 19:
-            print("Aries")
+            if date >= 1 and date <= 20:
+                print("Taurus.")
+            
+            elif date >= 21 and date <= 31:
+                print("Gemini.")
         
-        elif date >= 20 and date <= 31:
-            print("Taurus.") 
-    
-    elif month == "May":
+        elif month == "June":
 
-        if date >= 1 and date <= 20:
-            print("Taurus.")
+            if date >= 1 and date <= 20:
+                print("Gemini.")
+            
+            elif date >= 21 and date <= 31:
+                print("Cancer.")
+
+        elif month == "July":
+
+            if date >= 1 and date <= 22:
+                print("Cencer.")
+            
+            elif date >= 23 and date <= 31:
+                print("Leo.")
+
+        elif month == "August":
+
+            if date >= 1 and date <= 22:
+                print("Leo.")
+            
+            elif date >= 23 and date <= 31:
+                print("Virgo.")
         
-        elif date >= 21 and date <= 31:
-            print("Gemini.")
-    
-    elif month == "June":
+        elif month == "September":
 
-        if date >= 1 and date <= 20:
-            print("Gemini.")
+            if date >= 1 and date <= 22:
+                print("Virgo.")
+            
+            elif date >= 23 and date <= 31:
+                print("Libra.")
+
+        elif month == "October":
+
+            if date >= 1 and date <= 22:
+                print("Libra.")
+            
+            elif date >=23 and date <= 31:
+                print("Scorpio.")
         
-        elif date >= 21 and date <= 31:
-            print("Cancer.")
+        elif month == "November":
 
-    elif month == "July":
+            if date >= 1 and date <= 21:
+                print("Scorpio.")
+            
+            elif date >=22 and date <= 31:
+                print("Sagittarius.")
 
-        if date >= 1 and date <= 22:
-            print("Cencer.")
-        
-        elif date >= 23 and date <= 31:
-            print("Leo.")
+        elif month == "December":
 
-    elif month == "August":
-
-        if date >= 1 and date <= 22:
-            print("Leo.")
-        
-        elif date >= 23 and date <= 31:
-            print("Virgo.")
-    
-    elif month == "September":
-
-        if date >= 1 and date <= 22:
-            print("Virgo.")
-        
-        elif date >= 23 and date <= 31:
-            print("Libra.")
-
-    elif month == "October":
-
-        if date >= 1 and date <= 22:
-            print("Libra.")
-        
-        elif date >=23 and date <= 31:
-            print("Scorpio.")
-    
-    elif month == "November":
-
-        if date >= 1 and date <= 21:
-            print("Scorpio.")
-        
-        elif date >=22 and date <= 31:
-            print("Sagittarius.")
-
-    elif month == "December":
-
-        if date >= 1 and date <= 21:
-            print("Aquarius")
-        
-        elif date >=22 and date <= 31:
-            print("Capricorn.")
-else:
-    print("'Error'")
+            if date >= 1 and date <= 21:
+                print("Aquarius")
+            
+            elif date >=22 and date <= 31:
+                print("Capricorn.")
+    else:
+        print("'Error'")
