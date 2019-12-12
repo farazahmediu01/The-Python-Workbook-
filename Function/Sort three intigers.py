@@ -5,4 +5,11 @@ def sort_integers(a,b,c):
     
     return smallest, middle, largest
 
-print(sort_integers(22, 14, 11))
+x = []
+
+while len(x) < 3:
+    i = int(input("Enter value: "))
+    x.append(i)
+
+a,b,c = x
+print(sort_integers(a,b,c))

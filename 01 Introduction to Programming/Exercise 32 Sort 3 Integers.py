@@ -10,9 +10,10 @@ b = int(input("Enter Second number: "))
 c = int(input("Enter Third number : "))
 
 # Sorting integers in assending order.
-s = min(a,b,c)     # The smallest value in s.
-l = max(a,b,c)     # The largest value in l.
-m =  (a + b + c) - (s + l)   # The middle value is calculated and stored in m.
+smallest = min(a,b,c)     # The smallest value in s.
+largest = max(a,b,c)     # The largest value in l.
+middle =  (a + b + c) - (s + l)   # The middle value is calculated and stored in m.
+message = f'largest = {s}'
 
 # Output of program.
 print()
