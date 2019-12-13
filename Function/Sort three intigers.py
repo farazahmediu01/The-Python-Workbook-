@@ -1,7 +1,7 @@
 def sort_integers(a,b,c):
     smallest = min(a,b,c)
     largest = max(a,b,c)
-    middle = (a + b + c) - (smallest  - largest)
+    middle = (a + b + c) - (largest + smallest)
     
     return smallest, middle, largest
 
