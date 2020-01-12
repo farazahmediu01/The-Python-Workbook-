@@ -6,3 +6,5 @@ def formate_name(first_name, last_name):
 
 musician = formate_name('faraz','ahmed')
 print(musician)
+
+
