@@ -10,7 +10,7 @@ def input_loop(limit=5):
   
     user_input = None
     while (len(members) < limit) and (user_input != ''):
-        user_input = input(">")
+        user_input = input(">").lower()
         if user_input:
             members.append(user_input)
 
@@ -28,11 +28,13 @@ else:
     print("\nSorry, You have not invited any person.")
 
 # Asking for more information 
-print("\nDo you want to invite more friends? press 'y' to contineu and 'n' to exit.")
+# print("\nDo you want to invite more friends? press 'y' to contineu and 'n' to exit.")
+print("\nPress 'a' if you want to invite more friends.\nPress 'd' to delete your friend from the list")
+print("Press 'n' or enter to exit.")
 verification = input(">")
 
 # if user say yes the loop runs otherwise it says bye to user.
-if verification.lower() == "y":
+if verification.lower() == "a":
     print("\nHow many friends you want to invite?")
     limit = int(input("Enter number only: "))
     print(f"Please enter {limit} names, (press enter to skip).")
@@ -42,5 +44,15 @@ if verification.lower() == "y":
     print("\nList of all members you have invited:")
     for member in sorted(members):
         print(member.title())
+
+elif verification == 'd'.lower():
+    print("Type the name of your friend which you want to delete.")
+    name = input("Enter full name: ").lower()
+    try:
+        members.remove(name)
+        for member in member:
+            print(member.title)
+    except:
+        pass
 else:
     print("\nThank you, See you later!")
