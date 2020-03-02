@@ -1,5 +1,4 @@
 print("Enter a series of pizza toppings, press enter to quit.")
-
 active = True
 
 while active:
