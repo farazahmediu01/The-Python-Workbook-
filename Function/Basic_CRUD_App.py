@@ -1,8 +1,9 @@
+'''
 # Create Read Update Delete (CRUD)
 
 
 def add(user_input, array):
-    '''This function insert an element into a list as a new slot.'''
+    This function insert an element into a list as a new slot.
     return array.append(user_input)
 
 
@@ -15,7 +16,7 @@ def delete(user_input, array):
     del array[index]
 
 def input_loop(number=5):
-    '''Main input loop'''
+    Main input loop
     user_input = None
     count = 0
 
@@ -43,3 +44,4 @@ def main():
 
     # Main loop.
     
+'''

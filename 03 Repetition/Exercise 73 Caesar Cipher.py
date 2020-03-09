@@ -1,4 +1,3 @@
-"Monitor lazerd"
 #str.isspace()
 
 text                  = input("Enter messge: ")
