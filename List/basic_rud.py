@@ -1,19 +1,21 @@
+
 message = ""
 storage = []        # Main storage variable.
 input_array = []    # Partial storage variable.
-inp = None          # Defaul input variable.
+inp = 1          # Defaul input variable.
 
 
 def press_validation(press):
-    # This block verify that user input must be a number '1' '2' and '3'.
+    # This block verify that user input must be a number 'a' 'd' and 'r'.
     # User can only 'Add' 'Delete' and 'Read' data if this fuction returns True.
-    if press == 'a' or press == 'd' or press == 's':
+    if press == 'a' or press == 'd' or press == 'r':
         return True
     else:
         return False
 
 
 def number_validation(number, message):
+    # This block is skip due to complexity and non user friendly key mappings.
     # This function is used in the '1' and '2' part where the user enter number for add or delete names.
     if number.isnumeric():
         return int(number)
@@ -32,10 +34,11 @@ def number_validation(number, message):
 
 def input_loop(number):
     # This funtion start a loop for user input the range is defined by user and loops ends with an empty string.
-    count = 0
+    #count = 0
     inp = None
     input_array.clear()
-    print(f"\nEnter {number} names, (press enter to skip).")
+    #print(f"\nEnter {number} names, (press enter to skip).")
+    print(f"\nEnter names, (press enter to skip).")
 
     while (count < number) and (inp != ""):
         inp = input(">")
@@ -46,9 +49,11 @@ def input_loop(number):
 
 
 def delete_names(names):
-    for x in names:
-        while x in storage:
-            storage.remove(x)
+    #for x in names:
+    #    while x in storage:
+    #        storage.remove(x)
+
+    
 
 
 def sorted_names(n):
@@ -64,11 +69,12 @@ def sorted_names(n):
 
 
 def main():
+    global inp
     # Initialzing main variables
     message = "\nEnter name of your friends you want to invite in your party."
     #storage = []        # Main storage variable.
     #input_array = []    # Partial storage variable.
-    inp = None          # Defaul input variable.
+    #inp = None          # Defaul input variable.
     #validation = None
     print(message)
 
@@ -76,15 +82,15 @@ def main():
     while True:
 
         # First block to be run.
-        if inp == None:
+        if inp == 1:
             # This block runs only first time where user enter first 5 or less then 5 names.
             input_array = input_loop(5)
             storage.extend(input_array)
             print(f"You have entered {len(input_array)} names.")
 
-        print("\nPress '1' to add names.")
-        print("Press '2' to delete names.")
-        print("Press '3' to see all names.")
+        print("\nPress 'a' to add names.")
+        print("Press 'd' to delete names.")
+        print("Press 'r' to read all names.")
         print("Type 'quit' to exit.\n")
 
         # This is second conditonal block which handles the wrong input.
@@ -118,8 +124,8 @@ def main():
             print(f"{len(input_array)} names deleted.")
 
         # Sort names
-        elif inp == 's':
-            print("Do you want to print name in a sorted way [y/n].")
+        elif inp == 'r':
+            print("Read name in a sorted way [y/n]?")
             #print("\nPress 'y' to print formated names, otherwise press enter.")
             inp = input(">")
             sorted_names(inp)
@@ -131,9 +137,6 @@ def main():
             print("\nHave a nice day see you soon.")
             print("_" * 30)
             break
-
-
-
 
 
 if __name__ == "__main__":
