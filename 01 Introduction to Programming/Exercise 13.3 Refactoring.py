@@ -8,7 +8,7 @@ def make_change(rupees):
             print(f"{note}\t=\t{(rupees // note)}")
         rupees = rupees % note
 
-
+print("Progarm starts press 'e' to exit.")
 while True:
     rupees = input("\nEnter amount in Rupees: ")
     print()
