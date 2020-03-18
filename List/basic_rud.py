@@ -1,4 +1,4 @@
-
+# global variables
 message = ""
 storage = []        # Main storage variable.
 input_array = []    # Partial storage variable.
