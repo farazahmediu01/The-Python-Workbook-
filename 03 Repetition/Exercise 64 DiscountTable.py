@@ -2,7 +2,7 @@
 
 print("\n\nDiscount is 60%.\n")
 
-for i in [4.95, 9.95, 14.95, 19.95, 24.95]:
+for i in (4.95, 9.95, 14.95, 19.95, 24.95):
     
     print("\nOriginal price",i)
     

@@ -1,10 +1,11 @@
 series = []
-inp = 0
+inp = None
 
-while inp != '':    
+while inp != '':
+    if inp == None:
+        inp = input("Enter number: ")
     series.append(int(inp))
     inp = input('Enter number: ')
 
 series.sort(reverse=True)
-print(series[:-1])
-
+print(series)
