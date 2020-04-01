@@ -24,14 +24,56 @@ class User:
 
     def reset_login_attempts(self):
         self.login_attempts = 0
-    
 
-# Instantiating objects
-user_1 = User('sameer', 'ahmed')
-user_2 = User('sarab', 'ali khan')
-user_3 = User('faraz', 'ahmed')
-user_4 = User('ali', 'khan')
 
+class Privileges:
+    def __init__(self, *privileges):
+        self.privileges = ('can edit post', 'can delete post', 'can ban user')
+        self.privileges += privileges
+
+    def set_priviliges(self, *privileges):
+        print(f"before{self.privileges}")
+        for p in privileges:
+            self.privileges += p
+        print('after', self.privileges)
+
+    def show_privileges(self):
+        for text in self.privileges:
+            # print(f"{admin_1.first_name} {text}.")
+            print(text)
+
+
+class Admin(User):
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
+        self.privileges = Privileges()
+
+
+admin_1 = Admin('imran', 'khan')
+Privileges.privileges = ("hello", "python")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# tupi = ("can go outside","can jump", 'can eat')
+
+# admin_1.privileges.set_priviliges(tupi)
+# Privileges.show_priviliges(admin_1)
+# admin_1.privileges.show_privileges()
+
+
+'''
 # User_1
 user_1.increment_login_attempts()
 user_1.increment_login_attempts()
@@ -54,6 +96,7 @@ for i in range(30):
 user_4.print_user_info()
 
 # Reset login attempts and print information of all instances.
-for user in (user_1,user_2,user_3,user_4):
+for user in (user_1, user_2, user_3, user_4):
     user.reset_login_attempts()
     user.print_user_info()
+'''

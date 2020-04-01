@@ -95,5 +95,5 @@ class ElectricCar(Car):
 tesla_1 = ElectricCar('tesla', 'model pd 100', 2020)
 tesla_2 = ElectricCar('tesla', 'model s', 2019)
 
-tesla_1.battery(battery_size=2000)
+tesla_1.battery.battery_size=2000
 print(tesla_1.battery.get_battery_description())

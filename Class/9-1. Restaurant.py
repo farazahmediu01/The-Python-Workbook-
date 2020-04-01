@@ -10,8 +10,8 @@ class Restaurant:
 
     def describe_restaurant(self):
         '''This method describe two attributes of an instance.'''
-        describe_text = f"{self.restaurant_name} {self.cuisine_type}"
-        return describe_text.title()
+        describe_text = f"{self.restaurant_name.title()} is a {self.cuisine_type.title()} shop."
+        return describe_text
 
     def open_restaurent(self):
         '''This method tells the restaurant is open.'''
@@ -21,7 +21,7 @@ class Restaurant:
     def print_info(self):
         '''This function print the information return by 
         describe_restaurant and open_restaurent so you don't have to.'''
-        information = f"\n{self.describe_restaurant()}\n{self.open_restaurent()}" 
+        information = f"\n{self.describe_restaurant()}\n{self.open_restaurent()}"
         information += f"\nNumber served = {self.number_served}"
         print(information)
 
@@ -41,6 +41,38 @@ class Restaurant:
         self.set_number_served(increment)
 
 
+class IceCreamStand(Restaurant):
+    '''This class is inheret from Restuarant.
+    it a practice from book Python crash course
+    by eric methews, chapter 9-6 Ice Cream Stand.'''
+
+    def __init__(self, restaurant_name, cuisine_type, *flavors):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = flavors
+
+    def display_flavors(self):
+        print(f"\nFollowing are the flowers in {self.restaurant_name.title()}:")
+        for count, flavor in zip(range(1, len(self.flavors) + 1), self.flavors):
+            message = f"{count}) {flavor.title()}"
+            print(message)
+    def print_flavor_list(self):
+        print(self.flavors)
+
+ice_shop_1 = IceCreamStand('ideal 36','ice cream','vanila', 'chocolate', 'blue_berry', 'cheeku', 'kaju', 'kulfa')
+ice_shop_2 = IceCreamStand('creamy', 'ice cream','chocolate chip', 'blue berry', 'pista', 'peanut', 'kit-kat', 'dairy-milk', 'pishawri')
+
+print(ice_shop_1.describe_restaurant())
+print(ice_shop_2.describe_restaurant())
+
+ice_shop_1.display_flavors()
+ice_shop_2.display_flavors()
+
+ice_shop_1.print_flavor_list()
+ice_shop_2.print_flavor_list()
+
+
+
+'''
 restaurant_1 = Restaurant('makrani hotel', 'desi dhaba')
 restaurant_2 = Restaurant('ghreeb nawaz hotel', 'desi tarka')
 restaurant_3 = Restaurant('dhaba spice', 'fast food')
@@ -79,3 +111,4 @@ restaurant_4.set_number_served(4)
 
 restaurant_4.set_number_served(6)
 print("set 6:", restaurant_4.number_served)
+'''
