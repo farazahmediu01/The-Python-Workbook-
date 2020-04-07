@@ -1,19 +1,14 @@
 path_pi = r'D:\Downloads\python\Python\Programs\visual studio code\Starting from Introduction\Files_and_exception\pi_file'
 path_txt = r'D:\Downloads\python\Python\Programs\visual studio code\Starting from Introduction\Files_and_exception\txt'
-file_t = 'txt'
-with open(file_t) as file_handle:
-    # lines = file_handle.readlines()
-
-    # string = ''
-    for line in file_handle:
-    # string += line.rstrip()
-        print(line)
-# print(string)
-# print(len(string))
-
-# decimal_part = string[2:]
-# print(f"Decimal part =  {decimal_part}\nlenght = {len(decimal_part)}")
-
-# help(open(path_pi))
 
 
+with open('txt') as file_handle:
+    
+    size_to_read = 10
+    # for content in file_handle.read(size_to_read):
+    content = 'abc'
+    while len(content) > 0:    
+        content = file_handle.read(10)
+        print(content, end='*')
+
+    
