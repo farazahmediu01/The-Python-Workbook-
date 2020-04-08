@@ -1,38 +1,23 @@
-from functionality import press_validation, input_loop, delete_names, sorted_names
+from functionality import press_validation, input_loop, delete_names, sorted_names, make_file
 
 
-names = ['sameer', 'faraz', 'sarab', 'ali', 'faiq', 'rameez']
-names = sorted_names(names)
-print(names)
-
-
-
-
-
-
-# global variables
-message = ""
-storage = []        # Main storage variable.
-input_array = []    # Partial storage variable.
-inp = None          # Defaul input variable.
-
-
-def main(message="", storage=[], input_array=[], inp=None):
+def main():
     # global inp, storage, input_array, message
     # Initialzing main variables
     message = "\nEnter name of your friends you want to invite in your party."
-    # storage = []        # Main storage variable.
-    # input_array = []    # Partial storage variable.
-    # inp = None          # Defaul input variable.
-    #validation = None
-    print(message)
+    storage = []        # Main storage variable.
+    input_array = []    # Partial storage variable.
+    inp = None          # Defaul input variable.
 
+    print(message)
     # Main loop.
     while True:
 
         # First block to be run.
         if inp == None:
-            # This block runs only first time where user enter first 5 or less then 5 names.
+            '''This block runs only first time where user enter names 
+            till user_input =! an empty string.'''
+
             input_array = input_loop()
             storage.extend(input_array)
             print(f"You have entered {len(input_array)} names.")
@@ -44,8 +29,7 @@ def main(message="", storage=[], input_array=[], inp=None):
 
         # This is second conditonal block which handles the wrong input.
         inp = input(">").lower()
-        if press_validation(inp) or inp == 'quit':
-            # This block only execute when the inp is a number between 1 to 3  or 'quit'
+        if press_validation(inp):
             pass
         else:
             print("Error")
@@ -54,60 +38,34 @@ def main(message="", storage=[], input_array=[], inp=None):
 
         # Add names
         if inp == 'a':
-            # message = "add"
-            # print("How many names you want to 'Add'?")
-            # inp = input("Enter number: ")
-            # num = number_validation(inp, message)
             input_array = input_loop()
             storage.extend(input_array)
             print(f"You have entered {len(input_array)} names.")
 
         # Delete names
         elif inp == 'd':
-            # message = "delete"
-            # print("How many names you want to delete?")
-            # inp = input("Enter number: ")
-            # num = number_validation(inp, message)
             input_array = input_loop()
-            delete_names(input_array)
-            # print(f"You have delete {len(input_array)} names.")
+            input_array = delete_names(input_array, storage)
+
+            print(f"You hava successfully delete {len(input_array)} names.")
+            for i in range(1, len(input_array) + 1):
+                print(f"{i}) {input_array[i-1]}")
 
         # Sort names
         elif inp == 'r':
             print("Read name in a sorted way [y/n]?")
-            #print("\nPress 'y' to print formated names, otherwise press enter.")
-            inp = input(">")
-            sorted_names(inp)
+            inp = input(">").lower()
+            sorted_names(inp, storage)
             print(f"Total {len(storage)} names")
 
         # Exit
         elif inp == 'e':
+            make_file(storage)
             print("_" * 30)
             print("\nHave a nice day see you soon.")
             print("_" * 30)
             break
 
 
-# if __name__ == "__main__":
-#     main()
-
-'''
-copied code from first impression.
-    #inp = input(">").lower()
-    # input_array.append(inp)
-    # count += 1
-    # storage.extend(input_array)
-    # if input_array:
-    # print(f"\nYou have enterd {len(input_array)} names.")
-    # else:
-    # print("You don't invite any of your friend.")
-    # input_array.clear()
-    #print("\nPress Enter to skip.")
-
-
-    delete:
-    # if number_validation_1(inp,message):
-        #    num = int(num)
-        # else:
-        #    while
-'''
+if __name__ == "__main__":
+    main()
