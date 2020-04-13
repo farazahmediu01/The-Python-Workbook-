@@ -28,9 +28,15 @@ def count_hours_minutes_seconds(seconds):
     remaining_seconds = seconds - hours * 3600 - minutes * 60
     return hours, minutes, remaining_seconds
 
+def calculate_time(time_series):
+    sec_container = []
+    for minute, second, hours in time_series:
+        seconds = count_seconds(minute, second, hours)
+        sec_container.append(seconds)
 
-# h, m, s = count_hours_minutes_seconds(3600)
-# print(f"{h},{m},{s}")
+    total_sec = sum(sec_container)
+    return count_hours_minutes_seconds(total_sec)
+
 
 
 time_series_flask_false = [(15, 32), (20, 27), (45, 45), (9, 0), (38, 47), (45, 56), (31, 17), (35, 41),
@@ -53,18 +59,14 @@ time_serires_Krish_naik_complete_ml = [(19, 5), (5, 15), (21, 49), (16, 5), (26,
                                        (8, 3), (9, 49), (6, 2), (20, 6), (6, 27), (10, 18), (13, 1), (10,
                                                                                                       59), (14, 55), (14, 6), (17, 23), (8, 39), (14, 36), (6, 12),
                                        (18, 32), (7, 37), (19, 6), (12, 30), (18, 15)]
-cs50_web_programming = [(27,43,3),(45,47,1),(30,55,3),(34,10,3),(41,15,1),(2,20,3),(41,14,2)]
-cs50_react_native = [(14,56,3),(59,22,7),(39,33,1),(46,56,1),(35,1,3),(24,17,3)]
+cs50_web_programming = [(27, 43, 3), (45, 47, 1), (30, 55, 3),
+                        (34, 10, 3), (41, 15, 1), (2, 20, 3), (41, 14, 2)]
+cs50_react_native = [(14, 56, 3), (59, 22, 7), (39, 33, 1),
+                     (46, 56, 1), (35, 1, 3), (24, 17, 3)]
 
 
-def calculate_time(time_series):
-    sec_container = []
-    for minute, second, hours in time_series:
-        seconds = count_seconds(minute, second, hours)
-        sec_container.append(seconds)
 
-    total_sec = sum(sec_container)
-    return count_hours_minutes_seconds(total_sec)
+
 
 '''
 # print(second)
@@ -81,6 +83,6 @@ print(minut)
 # Django time = (9, 54, 4)
 # Krish niak complete ml = (15, 19, 16)
 # CS50's Web Programming with Python and JavaScript = (19, 43, 24)
-# CS50's Mobile App Development with React Native = (19, 43, 24)
+# CS50's Mobile App Development with React Native = (21, 40, 5)
 '''
 print(calculate_time(cs50_react_native))
