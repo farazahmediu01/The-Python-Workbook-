@@ -1,6 +1,8 @@
+'''
+This function need correcting.
 def count_minutes(minutes, seconds):
-    '''This function converts number of minutes and seconds into
-    equivalent number of minutes'''
+    This function converts number of minutes and seconds into
+    equivalent number of minutes
 
     # Conversion for seconds to minutes
     remaining_seconds = seconds % 60
@@ -10,7 +12,7 @@ def count_minutes(minutes, seconds):
     return minutes
 
     # return f"{minutes} minute and {remaining_seconds} second"
-
+'''
 
 def count_seconds(minutes, seconds, hours=None):
     '''This function convert minutes and seconds
