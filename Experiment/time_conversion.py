@@ -14,6 +14,7 @@ def count_minutes(minutes, seconds):
     # return f"{minutes} minute and {remaining_seconds} second"
 '''
 
+
 def count_seconds(minutes, seconds, hours=None):
     '''This function convert minutes and seconds
     into total number of seconds'''
@@ -30,7 +31,10 @@ def count_hours_minutes_seconds(seconds):
     remaining_seconds = seconds - hours * 3600 - minutes * 60
     return hours, minutes, remaining_seconds
 
-def calculate_time(time_series):
+
+def main(time_series):
+    '''This function calculate the complete time and return hours minutes and seconds'''
+
     sec_container = []
     for minute, second, hours in time_series:
         seconds = count_seconds(minute, second, hours)
@@ -38,7 +42,6 @@ def calculate_time(time_series):
 
     total_sec = sum(sec_container)
     return count_hours_minutes_seconds(total_sec)
-
 
 
 time_series_flask_false = [(15, 32), (20, 27), (45, 45), (9, 0), (38, 47), (45, 56), (31, 17), (35, 41),
@@ -67,9 +70,6 @@ cs50_react_native = [(14, 56, 3), (59, 22, 7), (39, 33, 1),
                      (46, 56, 1), (35, 1, 3), (24, 17, 3)]
 
 
-
-
-
 '''
 # print(second)
 for minute, second in time_series_flask:
@@ -87,4 +87,4 @@ print(minut)
 # CS50's Web Programming with Python and JavaScript = (19, 43, 24)
 # CS50's Mobile App Development with React Native = (21, 40, 5)
 '''
-print(calculate_time(cs50_react_native))
+print(main(cs50_react_native))
