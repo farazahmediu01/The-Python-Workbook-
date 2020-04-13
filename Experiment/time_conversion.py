@@ -12,9 +12,11 @@ def count_minutes(minutes, seconds):
     # return f"{minutes} minute and {remaining_seconds} second"
 
 
-def count_seconds(minutes, seconds):
+def count_seconds(minutes, seconds, hours=None):
     '''This function convert minutes and seconds
     into total number of seconds'''
+    if hours:
+        return hours * 3600 + minutes * 60 + seconds
     return minutes * 60 + seconds
 
 
@@ -51,20 +53,20 @@ time_serires_Krish_naik_complete_ml = [(19, 5), (5, 15), (21, 49), (16, 5), (26,
                                        (8, 3), (9, 49), (6, 2), (20, 6), (6, 27), (10, 18), (13, 1), (10,
                                                                                                       59), (14, 55), (14, 6), (17, 23), (8, 39), (14, 36), (6, 12),
                                        (18, 32), (7, 37), (19, 6), (12, 30), (18, 15)]
-sec_container = []
+cs50_web_programming = [(27,43,3),(45,47,1),(30,55,3),(34,10,3),(41,15,1),(2,20,3),(41,14,2)]
+cs50_react_native = [(14,56,3),(59,22,7),(39,33,1),(46,56,1),(35,1,3),(24,17,3)]
 
 
 def calculate_time(time_series):
     sec_container = []
-    for minute, second in time_series:
-        seconds = count_seconds(minute, second)
+    for minute, second, hours in time_series:
+        seconds = count_seconds(minute, second, hours)
         sec_container.append(seconds)
 
     total_sec = sum(sec_container)
-
     return count_hours_minutes_seconds(total_sec)
 
-
+'''
 # print(second)
 for minute, second in time_series_flask:
     seconds = count_seconds(minute, second)
@@ -77,3 +79,8 @@ print(minut)
 
 # Flask time = (8, 50, 42)
 # Django time = (9, 54, 4)
+# Krish niak complete ml = (15, 19, 16)
+# CS50's Web Programming with Python and JavaScript = (19, 43, 24)
+# CS50's Mobile App Development with React Native = (19, 43, 24)
+'''
+print(calculate_time(cs50_react_native))
