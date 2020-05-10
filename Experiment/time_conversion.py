@@ -65,7 +65,7 @@ time_serires_Krish_naik_complete_ml = [(19, 5), (5, 15), (21, 49), (16, 5), (26,
                                                                                                       59), (14, 55), (14, 6), (17, 23), (8, 39), (14, 36), (6, 12),
                                        (18, 32), (7, 37), (19, 6), (12, 30), (18, 15)]
 cs50_web_programming = [(27, 43, 3), (45, 47, 1), (30, 55, 3),
-                        (34, 10, 3), (41, 15, 1), (2, 20, 3), (41, 14, 2)]
+                        (34, 10, 3), (41, 15, 1), (2, 20, 3), (41, 14, 2)] 
 cs50_react_native = [(14, 56, 3), (59, 22, 7), (39, 33, 1),
                      (46, 56, 1), (35, 1, 3), (24, 17, 3)]
 
@@ -87,4 +87,5 @@ print(minut)
 # CS50's Web Programming with Python and JavaScript = (19, 43, 24)
 # CS50's Mobile App Development with React Native = (21, 40, 5)
 '''
-print(main(cs50_react_native))
+# print(main(cs50_react_native))
+print(f"Krish Naik playlist len = {len(time_serires_Krish_naik_complete_ml)}")
