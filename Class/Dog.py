@@ -13,7 +13,7 @@ class Dog:
 dog_1 = Dog("Dolly", 6)
 dog_2 = Dog("Joji", 8)
 
-# print(dog_1.age)
+# print(dog_1.age) 
 # print(dog_2.age)
 
 # dog_1.roll()
