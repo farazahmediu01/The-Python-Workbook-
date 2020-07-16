@@ -25,6 +25,5 @@ user_1.greet_user()
 user_2.greet_user()
 
 print(
-user_2.full_name,
-user_1.full_name
-)
+    user_2.full_name,
+    user_1.full_name)
