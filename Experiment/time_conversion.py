@@ -12,6 +12,8 @@ def count_minutes(minutes, seconds):
 
     # return f"{minutes} minute and {remaining_seconds} second"
 '''
+def calculate_seconds(hours, minutes, seconds):
+    return hours * 3600 + minutes * 60 + seconds
 
 
 def hours_and_minutes_to_total_minutes(hours_and_minutes=None):
