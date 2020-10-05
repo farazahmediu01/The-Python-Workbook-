@@ -1,5 +1,4 @@
-'''
-This function need correcting.
+'''This function need correcting.
 def count_minutes(minutes, seconds):
     This function converts number of minutes and seconds into
     equivalent number of minutes
@@ -13,9 +12,10 @@ def count_minutes(minutes, seconds):
 
     # return f"{minutes} minute and {remaining_seconds} second"
 '''
+
+
 def hours_and_minutes_to_total_minutes(hours_and_minutes=None):
-    """
-    This function get a tuple (eg: (1,30)) which is 1 hour and 30 minutes
+    """This function get a tuple (eg: (1,30)) which is 1 hour and 30 minutes
     and return an integer value 90 because there are 90 minutes in 1 hour 
     and 30 minutes.
     """
@@ -24,9 +24,11 @@ def hours_and_minutes_to_total_minutes(hours_and_minutes=None):
     total_minutes = (hours * 60) + minutes
     return total_minutes
 
+
 def count_seconds(minutes, seconds, hours=None):
     '''This function convert minutes and seconds
-    into total number of seconds'''
+    into total number of seconds
+    '''
     if hours:
         return hours * 3600 + minutes * 60 + seconds
     return minutes * 60 + seconds
@@ -34,7 +36,8 @@ def count_seconds(minutes, seconds, hours=None):
 
 def count_hours_minutes_seconds(seconds):
     '''This function counts how many hours,minutes and seconds
-    in given number of seconds'''
+    in given number of seconds
+    '''
     hours = seconds // 3600
     minutes = (seconds - hours * 3600) // 60
     remaining_seconds = seconds - hours * 3600 - minutes * 60
@@ -74,13 +77,12 @@ time_serires_Krish_naik_complete_ml = [(19, 5), (5, 15), (21, 49), (16, 5), (26,
                                                                                                       59), (14, 55), (14, 6), (17, 23), (8, 39), (14, 36), (6, 12),
                                        (18, 32), (7, 37), (19, 6), (12, 30), (18, 15)]
 cs50_web_programming = [(27, 43, 3), (45, 47, 1), (30, 55, 3),
-                        (34, 10, 3), (41, 15, 1), (2, 20, 3), (41, 14, 2)] 
+                        (34, 10, 3), (41, 15, 1), (2, 20, 3), (41, 14, 2)]
 cs50_react_native = [(14, 56, 3), (59, 22, 7), (39, 33, 1),
                      (46, 56, 1), (35, 1, 3), (24, 17, 3)]
 
 
-'''
-# print(second)
+'''# print(second)
 for minute, second in time_series_flask:
     seconds = count_seconds(minute, second)
     sec_container.append(seconds)
