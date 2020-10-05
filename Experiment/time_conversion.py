@@ -13,7 +13,16 @@ def count_minutes(minutes, seconds):
 
     # return f"{minutes} minute and {remaining_seconds} second"
 '''
-
+def hours_and_minutes_to_total_minutes(hours_and_minutes=None):
+    """
+    This function get a tuple (eg: (1,30)) which is 1 hour and 30 minutes
+    and return an integer value 90 because there are 90 minutes in 1 hour 
+    and 30 minutes.
+    """
+    hours = hours_and_minutes[0]
+    minutes = hours_and_minutes[1]
+    total_minutes = (hours * 60) + minutes
+    return total_minutes
 
 def count_seconds(minutes, seconds, hours=None):
     '''This function convert minutes and seconds
