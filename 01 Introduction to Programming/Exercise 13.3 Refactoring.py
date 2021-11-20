@@ -11,14 +11,13 @@ def make_change(rupees):
 print("Progarm starts press 'e' to exit.")
 while True:
     rupees = input("\nEnter amount in Rupees: ")
-    print()
     if rupees.lower() == 'e':
         break
     try:
         rupees = int(rupees)
     except:
-        print("Enter numbers only")
-        print("Press 'e' to Exit. ")
+        print("\nEnter numbers only")
+        print("\nPress 'e' to Exit. ")
         continue
     make_change(rupees)
     print()
